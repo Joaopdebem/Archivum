@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "L2Lt82a9Ls+6fuRJhhSYjtxOTQbaqBtOS2nfz/J8d8t6kuTZfn7JdTuuzVi20WXpywtetKqkJzc4WbSvkkYY2Q==",
+  "dgSpecHash": "sQlmKbn3TdaikE6afORvXALB+9Jbe7Q8wWIqbCS6OJj2dGGZQC/sVfE5ewTTfIuMlbYjK42JoNsXpJvUbX+ohg==",
   "success": true,
   "projectFilePath": "C:\\Dev\\Archivum\\Archivum.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jpdeb\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\jpdeb\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\jpdeb\\.nuget\\packages\\dapper\\2.1.24\\dapper.2.1.24.nupkg.sha512",
+    "C:\\Users\\jpdeb\\.nuget\\packages\\dapper.contrib\\2.0.78\\dapper.contrib.2.0.78.nupkg.sha512",
     "C:\\Users\\jpdeb\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\jpdeb\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\jpdeb\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.2\\microsoft.data.sqlclient.5.1.2.nupkg.sha512",
