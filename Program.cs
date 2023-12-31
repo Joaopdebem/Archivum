@@ -7,14 +7,14 @@ namespace Archivum;
 public class Program
 {
     private const string CONNECTION_STRING = @"Server=localhost,1433;
-                                               Database=balta;
+                                               Database=bdManga;
                                                User ID=sa;
                                                Password=D3vInD0ck3r$@#$;
                                                Trusted_Connection=False; 
                                                TrustServerCertificate=True;";
     public static void Main(string[] args)
     {
-
+        ReadUsers();
     }
     public static void ReadUsers()
     {
