@@ -1,4 +1,8 @@
+using Dapper.Contrib.Extensions;
+
 namespace Archivum.Models;
+
+[Table("[Collection]")]
 
 public class Collection
 {
@@ -9,8 +13,8 @@ public class Collection
     public string? Description { get; set; }
     public int Chapter { get; set; }
     public int Rating { get; set; }
-    public bool IsFinished { get; set; }
-    public bool IsFavorite { get; set; }
+    public char IsFinished { get; set; }
+    public char IsFavorite { get; set; }
     public string? Slug { get; set; }
     public DateTime CreateDate { get; set; }
     public DateTime LastUpdateDate { get; set; }

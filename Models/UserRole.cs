@@ -1,4 +1,8 @@
+using Dapper.Contrib.Extensions;
+
 namespace Archivum.Models;
+
+[Table("[UserRole]")]
 
 public class UserRole
 {
