@@ -44,6 +44,7 @@ C:\Dev\Archivum\obj\Debug\net7.0\Archivum.GeneratedMSBuildEditorConfig.editorcon
 C:\Dev\Archivum\obj\Debug\net7.0\Archivum.AssemblyInfoInputs.cache
 C:\Dev\Archivum\obj\Debug\net7.0\Archivum.AssemblyInfo.cs
 C:\Dev\Archivum\obj\Debug\net7.0\Archivum.csproj.CoreCompileInputs.cache
+C:\Dev\Archivum\obj\Debug\net7.0\Archivum.sourcelink.json
 C:\Dev\Archivum\obj\Debug\net7.0\Archivum.csproj.CopyComplete
 C:\Dev\Archivum\obj\Debug\net7.0\Archivum.dll
 C:\Dev\Archivum\obj\Debug\net7.0\refint\Archivum.dll

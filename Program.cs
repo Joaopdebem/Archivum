@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using Archivum.Models;
+using Archivum.Repositories;
 using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
 
@@ -15,85 +16,32 @@ public class Program
                                                TrustServerCertificate=True;";
     public static void Main(string[] args)
     {
-        //ReadUsers();
-        //ReadUser();
-        //CreateUser();
-        //UpdateUser();
-        DeleteUser();
+
+        var connection = new SqlConnection(CONNECTION_STRING);
+        connection.Open();
+
+        ReadUsers(connection);
+        ReadRoles(connection);
+
+        connection.Close();
     }
-    public static void ReadUsers()
+    public static void ReadUsers(SqlConnection connection)
     {
-        using (var connection = new SqlConnection(CONNECTION_STRING))
-        {
-            var users = connection.GetAll<User>();
+        var repository = new UserRepository(connection);
+        var users = repository.Get();
 
-            foreach (var user in users)
-            {
-                Console.WriteLine($"Id: {user.Id};\nName: {user.Name};\nEmail = {user.Email};\nImage = {user.Image};\nSlug = {user.Slug}\n");
-            }
-        }
-    }
-
-    public static void ReadUser()
-    {
-        using (var connection = new SqlConnection(CONNECTION_STRING))
-        {
-            var user = connection.Get<User>(1);
-
+        foreach (var user in users)
             Console.WriteLine(user.Name);
-        }
-    }
-
-    public static void CreateUser()
-    {
-
-        var user = new User()
-        {
-            Name = "Teste",
-            Email = "teste@gmail.com",
-            PasswordHash = "teste",
-            Image = "https://mpng",
-            Slug = "testando-teste"
-        };
-
-        using (var connection = new SqlConnection(CONNECTION_STRING))
-        {
-            connection.Insert<User>(user);
-            Console.WriteLine("Registro realizado com sucesso.");
-        }
-
 
     }
 
-    public static void UpdateUser()
+    public static void ReadRoles(SqlConnection connection)
     {
+        var repository = new RoleRepository(connection);
+        var roles = repository.Get();
 
-        var user = new User()
-        {
-            Id = 2,
-            Name = "João Pedro",
-            Email = "joao@gmail.com",
-            PasswordHash = "698dc19d489c4e4db73e28a713ea4507b",
-            Image = "https://i.imgur.com/TGSACle.png",
-            Slug = "joao-pedro"
-        };
-
-        using (var connection = new SqlConnection(CONNECTION_STRING))
-        {
-            connection.Update<User>(user);
-            Console.WriteLine("Registro atualizado com sucesso.");
-        }
-
-    }
-
-    public static void DeleteUser()
-    {
-        using (var connection = new SqlConnection(CONNECTION_STRING))
-        {
-            var user = connection.Get<User>(3);
-            connection.Delete<User>(user);
-            Console.WriteLine("Exclusão realizada com sucesso.");
-        }
+        foreach (var role in roles)
+            Console.WriteLine(role.Name);
 
     }
 
